@@ -1,0 +1,120 @@
+<html>
+<head></head>
+<style>
+    
+
+#snowglobe{
+    position: absolute;
+        top:22vmin;
+        left:22vmin;
+        width:55vmin;
+        height:55vmin;
+        border: 8px solid green;
+        border-radius:50%;
+        overflow:hidden;
+        transform-origin:bottom;
+    }
+    
+        #sphere{
+        position:absolute;
+        top:0%;
+        left:0%;
+         width:100%;
+        height:100%;
+        background-color:blue;
+        border-radius:50%;
+    }
+    #snowman01{
+        position:absolute;
+        top:63%;
+        left:50%;
+         width:30%;
+        height:30%;
+        background-color:white;
+        border-radius:50%;
+        
+    }
+        #snowman02{
+        position:absolute;
+        top:47%;
+        left:52%;
+         width:25%;
+        height:25%;
+        background-color:white;
+        border-radius:50%;
+        
+    }
+        #snowman03{
+        position:absolute;
+        top:32%;
+        left:55%;
+         width:20%;
+        height:20%;
+        background-color:white;
+        border-radius:50%;
+    
+        animation: jump 2s ease-in-out;
+        
+    }
+    @keyframes jump{
+        to(transform)
+    }
+    }
+        #base{
+        position:absolute;
+        top:66%;
+        left:25%;
+        width:50%;
+        height:20%;
+       transform: perspective(2em) rotateX(5deg);
+    }
+        
+    
+    
+    
+     .accentColor{
+          background-color:hsla(60,100%,50%);
+        border: 5px solid green;
+        background-image: linear-gradient(purple,blue);
+        
+        
+    }
+    #blackBase01{
+        position:absolute;
+        top:0%;
+        left:0;
+        width:100%;
+        height:20%;
+        background-color:black;
+    }
+        #blackBase02{
+        position:absolute;
+        top:90%;
+        left:0;
+        width:100%;
+        height:10%;
+        background-color:black;
+    }
+    
+    </style>
+<body>
+<div id="snowglobe">
+    <div id="sphere"></div>
+   <div id="snowman01"></div>
+    <div id="snowman02"></div>
+    <div id="snowman03"></div></div>
+<div id="base" class="accentColor">
+    <div id= "blackBase01"></div>
+    <div id= "blackBase02"></div>
+    
+    
+    </div>
+
+</body>
+    </html>
+
+
+
+
+
+
