@@ -1,0 +1,159 @@
+<html>
+<head></head>
+<style>
+    #startScreen{
+        position:absolute;
+        top:30vh;
+        left:10vw;
+        width:80vw;
+        height:40vh;
+        background-color:gray;
+        /*display:none; /* block*/ 
+    }
+    
+    #gameScreen{
+        position:absolute;
+        top:5vh;
+        left:5vw;
+        width:90vw;
+        height:90vh;
+        background-color:lightgray; 
+        display:block;
+        
+    }
+    
+        #endScreen{
+        position:absolute;
+        top:30vh;
+        left:10vw;
+        width:80vw;
+        height:40vh;
+        background-color:black;
+        display:none; /* block*/ 
+    }
+    
+    
+      #startBTN{
+        position:absolute;
+        top:30%;
+        left:10%;
+        width:80%;
+        height:40%;
+        background-color:lightgray;
+        cursor:pointer;
+        user-select: none;
+    }
+    
+    #flowerTop{
+        position:absolute;
+        top:80%;
+        left:10%;
+        width:10%;
+        height:10%;
+        background-color:hotpink;
+        border-radius:50%;
+        z-index: 100;
+    
+    }
+    #innerFlower{
+        position:absolute;
+        top:15%;
+        left: 13%;
+        width:75%;
+        height:75%;
+        border-radius: 50%;
+        background-color: yellow;
+    }
+    
+    #flowerSTEM {
+        position: absolute;
+        top:90%;
+        left:45%;
+        width:10%;
+        height:110%;
+        background-color:green;
+        
+    }
+    
+    #wateringCan{
+        position:absolute;
+        top:80%;
+        left:50%;
+        width:10%;
+        height:10%;
+        background-color:blue;
+        transform
+    }
+    
+    </style>
+<body>
+    <div id="startScreen">
+        <div id="startBTN"></div></div>
+    
+    <div id="gameScreen">
+    <div id="flowerTop">
+        <div id="innerFlower"></div>
+        <div id="flowerSTEM"></div></div>
+     <div id = "wateringCan"></div>
+    
+    
+    </div>
+    
+    <div id="endScreen"></div>
+    
+    <script>
+    
+    var myStartScreen;
+        myStartScreen=
+        document.querySelector("#startScreen")
+    
+     var myGameScreen;
+        myGameScreen=
+        document.querySelector("#gameScreen")
+        
+     var myEndScreen;
+        myEndScreen=
+        document.querySelector("#endScreen")
+        
+     var myStartBTN;
+        myStartBTN =  
+        document.querySelector("#startBTN")
+        
+        myStartBTN.innerHTML = "START";
+        myStartBTN.style.textAlign = "center";
+        myStartBTN.style.fontSize = "3em";
+       myStartBTN.addEventListener("click", hideShowStartGame,false);
+     
+   
+        
+        var myWateringCan;
+        myWateringCan= 
+            document.querySelector("#wateringCan");
+        
+        var myFlowerTop;
+            myFlowerTop =
+            document.querySelector =("#flowerTop");
+        
+        var positionY = 0;
+        
+        myWateringCan.addEventListener("click",growFlower,false);
+        
+        function growFlower{
+            positionY= positionY + 20;
+            //positonY+ =20
+            // how can I change the position of flowerTop?
+            myFlowerTop.style.transform ="translateY("+positionY+"%);
+            
+        }
+     
+          function hideShowStartGame(){
+        myStartScreen.style.display="none";
+        myGameScreen.style.display = "block";
+        }
+        
+       
+    </script>
+    
+    </body>
+
+</html>
